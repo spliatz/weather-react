@@ -1,0 +1,49 @@
+.tabs {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  border-right: 1.5px solid black;
+  
+
+  .tab-selection-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+
+    .tab-selection {
+      padding: 16px;
+      height: 100%;
+      background: white;
+      color: black;
+      font-size: 18px;
+      font-family: Roboto, sans-serif;
+      flex-basis: 33.33%;
+      text-align: center;
+      cursor: pointer;
+      user-select: none;
+      border-right: 1.5px solid black;
+      transition: background 0.3s linear;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+    .active {
+      background: black;
+      color: white;
+    }
+  }
+}
+
+
+@media (max-width: 650px){
+  .tabs {
+    width: 100%;
+    border-right: none;
+  }
+}
+

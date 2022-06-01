@@ -1,0 +1,34 @@
+.search-form {
+  display: flex;
+  height: 50px;
+  width: 100%;
+  position: relative;
+  border-bottom: 1.5px solid black;
+
+  input {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #4b4b4b;
+    padding: 8px;
+    font-size: 18px;
+    font-family: Roboto, sans-serif;
+
+    &::placeholder {
+      color: #777777;
+      user-select: none;
+    }
+  }
+
+  button{
+    width: 23px;
+    height: 23px;
+    border: none;
+    outline: none;
+    background: url("../../images/serch.svg") no-repeat;
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    cursor: pointer;
+  }
+}
