@@ -2,9 +2,10 @@ import * as React from 'react';
 import TabOne from './tab-one/tab-one';
 import TabTwo from './tab-two/tab-two';
 import TabThree from './tab-three/tab-three';
+import { Tabs } from '../../../types';
 import './tabs.scss';
 
-const Tabs = () => {
+const Tabs: React.FC<Tabs> = ({dataNow,dataList, setFavourite, favouriteList}) => {
     const [toggleState, setToggleState] = React.useState(1);
 
     const toggleTab = (index: number) => {
@@ -14,9 +15,9 @@ const Tabs = () => {
     return (
         <div className={'tabs'}>
 
-            <TabOne isActive={toggleState === 1}/>
-            <TabTwo isActive={toggleState === 2}/>
-            <TabThree isActive={toggleState === 3}/>
+            <TabOne isActive={toggleState === 1} data={dataNow} setFavourite={setFavourite} favouriteList={favouriteList}/>
+            <TabTwo isActive={toggleState === 2} data={dataNow}/>
+            <TabThree isActive={toggleState === 3} data={dataList}/>
 
             <div className={'tab-selection-wrapper'}>
                 <div

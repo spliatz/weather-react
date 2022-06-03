@@ -1,7 +1,8 @@
 import * as React from 'react';
+import { Search } from '../../types';
 import './search.scss';
 
-const Search = () => {
+const Search: React.FC<Search> = ({setCity}) => {
     const [value, setValue] = React.useState('');
 
     const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -10,7 +11,7 @@ const Search = () => {
 
     const submitHandler = (event: React.FormEvent) => {
         event.preventDefault();
-        console.log(value);
+        setCity(value);
         setValue('');
     };
 

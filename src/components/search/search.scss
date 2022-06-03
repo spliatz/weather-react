@@ -4,6 +4,8 @@
   width: 100%;
   position: relative;
   border-bottom: 1.5px solid black;
+  justify-content: center;
+  align-items: center;
 
   input {
     width: 100%;
@@ -26,9 +28,22 @@
     border: none;
     outline: none;
     background: url("../../images/serch.svg") no-repeat;
-    position: absolute;
-    right: 10px;
-    top: 8px;
+    //position: absolute;
+    //right: 10px;
+    //top: 8px;
+    position: relative;
+    right: 3%;
     cursor: pointer;
+  }
+}
+
+@media (max-width: 650px) {
+  .search-form {
+    height: 60px;
+
+    button {
+      position: relative;
+      right: 5%;
+    }
   }
 }

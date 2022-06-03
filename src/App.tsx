@@ -3,7 +3,7 @@ import Weather from './container/weather/weather';
 
 const App = () => {
     return (
-            <Weather/>
+        <Weather/>
     );
 };
 

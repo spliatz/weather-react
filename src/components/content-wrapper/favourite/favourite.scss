@@ -1,10 +1,42 @@
 .favourite {
   width: 50%;
   height: 100%;
+  padding: 30px 0;
+  font-family: Roboto, sans-serif;
+  font-size: 24px;
   background: rgba(182, 241, 187, 0.24);
+
+  .tittle {
+    border-bottom: 1.5px solid black;
+    padding-bottom: 20px;
+    padding-left: 20px;
+  }
+
+  .favourite-list {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .favourite-list__item {
+      color: black;
+      background: none;
+      transition-duration: 0.2s;
+      width: fit-content;
+      text-align: center;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        color: white;
+        background: black;
+      }
+    }
+  }
 }
 
-@media (max-width: 650px){
+@media (max-width: 650px) {
   .favourite {
     display: none;
   }

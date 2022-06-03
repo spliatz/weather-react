@@ -26,6 +26,9 @@
       user-select: none;
       border-right: 1.5px solid black;
       transition: background 0.3s linear;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       &:last-child {
         border-right: none;
