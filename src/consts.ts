@@ -27,6 +27,13 @@ export const INITIAL_DATA_NOW = {
             icon: '',
         },
     ],
+    sys: {
+        country: '',
+        id: 0,
+        sunrise: 0,
+        sunset: 0,
+        type: 0,
+    }
 };
 
 export const INITIAL_DATA_LIST = {
@@ -66,3 +73,8 @@ export const INITIAL_DATA_LIST = {
         },
     ],
 };
+
+export function getString(number :number) {
+    return ('' + number).length < 2 ?
+        '0' + number : '' + number;
+} // нужно для корректного отображения времени (вместо 6:2 6:20)

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Favourite } from '../../../types';
+import { Favourite } from '../../types';
 import "./favourite.scss";
 
 const Favourite: React.FC<Favourite> = ({data, setCity}) => {

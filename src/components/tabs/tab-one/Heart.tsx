@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Heart } from '../../../../types';
+import { Heart } from '../../../types';
 
 const Heart: React.FC<Heart> = ({isFavourite}) => {
     return (

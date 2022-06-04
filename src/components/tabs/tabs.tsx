@@ -2,7 +2,7 @@ import * as React from 'react';
 import TabOne from './tab-one/tab-one';
 import TabTwo from './tab-two/tab-two';
 import TabThree from './tab-three/tab-three';
-import { Tabs } from '../../../types';
+import { Tabs } from '../../types';
 import './tabs.scss';
 
 const Tabs: React.FC<Tabs> = ({dataNow,dataList, setFavourite, favouriteList}) => {
