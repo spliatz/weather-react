@@ -30,13 +30,14 @@ export interface TabThree {
 export interface Favourite {
     data: Array<string>;
     setCity: (argument: string) => void;
+    setFavourite: (argument: Array<string>) => void;
 }
 
 export interface ListResponse {
     cod: number;
-    list?: Array<List>;
-    name?: string;
-    weather: Array<Weather>;
+    list: Array<List>;
+    city: {name: string, id: number};
+    cnt: number;
 }
 
 export interface Heart {

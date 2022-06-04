@@ -4,5 +4,67 @@
 }
 
 .tab-three {
+  padding: 40px 0 20px 30px;
   background: rgba(122, 70, 255, 0.27);
+
+  .tittle__city-name {
+    font-family: Roboto, sans-serif;
+    font-size: 24px;
+    padding-bottom: 10px;
+  }
+
+  .forecast-list {
+    display: flex;
+    flex-direction: column;
+    max-height: 400px;
+    overflow: auto;
+    gap: 15px;
+    padding-right: 30px;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+
+    .forecast-item {
+      border: 1.5px solid #3d3d81;
+      padding: 10px 0;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 15px;
+
+      .date {
+        flex-basis: 50%;
+      }
+
+      .time {
+        flex-basis: 50%;
+      }
+
+      .temperatures {
+        display: flex;
+        flex-basis: 50%;
+        flex-direction: column;
+        //gap: 2px;
+      }
+
+      .weather-view {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 0;
+        text-align: right;
+
+        p {
+          width: 100%;
+        }
+
+        img {
+          width: 35px;
+          height: 35px;
+          transform: scale(1.5);
+        }
+      }
+    }
+  }
 }

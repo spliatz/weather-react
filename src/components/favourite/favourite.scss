@@ -1,10 +1,10 @@
 .favourite {
   width: 50%;
-  height: 100%;
   padding: 30px 0;
   font-family: Roboto, sans-serif;
   font-size: 24px;
-  background: rgba(182, 241, 187, 0.24);
+  background: rgba(182, 241, 187, 0.54);
+  overflow: scroll;
 
   .tittle {
     border-bottom: 1.5px solid black;
@@ -13,10 +13,12 @@
   }
 
   .favourite-list {
-    padding-left: 20px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    max-height: 416px;
+    overflow: auto;
 
     .favourite-list__item {
       color: black;
@@ -24,13 +26,59 @@
       transition-duration: 0.2s;
       width: fit-content;
       text-align: center;
-      padding: 5px 10px;
+      padding: 5px 30px 5px 12px;
       border-radius: 5px;
-      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      position: relative;
+
+      p {
+        cursor: pointer;
+      }
+
+      .delete-fav {
+        visibility: visible;
+        cursor: pointer;
+        outline: none;
+        background: black;
+        border: none;
+      }
+
+      .delete-fav:before,
+      .delete-fav:after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background: black;
+        opacity: 1;
+        top: 18px;
+      }
+
+      .delete-fav:before {
+        webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+
+      .delete-fav:after {
+        webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
 
       &:hover {
         color: white;
         background: black;
+
+        .delete-fav {
+          background: white;
+        }
+
+        .delete-fav:before,
+        .delete-fav:after {
+          background: #ffffff;
+        }
       }
     }
   }

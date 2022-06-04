@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { TabOne, TabsItem } from '../../../types';
+import {toCelsius} from '../../../consts';
 import Heart from './Heart';
 import './tab-one.scss';
 
@@ -9,7 +10,7 @@ const TabOne: React.FC<TabOne & TabsItem> = ({isActive, data, setFavourite, favo
 
     const weatherImage = (`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
 
-    const temp = (data.main.temp - 273.15).toFixed(1);
+    const temp = toCelsius(data.main.temp);
 
     React.useEffect(() => {
         if (favouriteList.includes(data.name)) {

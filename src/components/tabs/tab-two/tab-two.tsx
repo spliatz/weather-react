@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { TabsItem, TabTwo } from '../../../types';
-import { getString } from '../../../consts';
+import { getString, toCelsius } from '../../../consts';
 import './tab-two.scss';
 
 const TabTwo: React.FC<TabTwo & TabsItem> = ({isActive, data}) => {
@@ -15,8 +15,8 @@ const TabTwo: React.FC<TabTwo & TabsItem> = ({isActive, data}) => {
             <div className="tab-content tab-two">
                 <p>{data.name}</p>
                 <ul className={'data-list'}>
-                    <li>Temperature: {((data.main.temp - 273.15).toFixed(1) + '°')}</li>
-                    <li>Feels like: {(data.main.feels_like - 273.15).toFixed(1) + '°'}</li>
+                    <li>Temperature: {toCelsius(data.main.temp) + '°'}</li>
+                    <li>Feels like: {toCelsius(data.main.feels_like) + '°'}</li>
                     <li>Weather: {data.weather[0].main}</li>
                     <li>Sunrise: {sunrise}</li>
                     <li>Sunset: {sunset}</li>
